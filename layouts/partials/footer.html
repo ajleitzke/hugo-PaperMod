@@ -1,15 +1,15 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
+    <span>
+        <a href="https://www.leitzke.me/privacy/" target="_blank">Privacy Policy</a>&nbsp;
+        <a href="https://www.leitzke.me/terms/" target="_blank">Terms and Conditions</a>
+        <br>
+    </span>
     {{- if site.Copyright }}
     <span>{{ site.Copyright | markdownify }}</span>
     {{- else }}
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
     {{- end }}
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
 </footer>
 {{- end }}
 
